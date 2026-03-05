@@ -46,6 +46,6 @@ aws s3 cp s3://${bucket}/adminlist.txt /home/${username}/.config/unity3d/IronGat
 
 echo "Starting server PRESS CTRL-C to exit"
 
-./valheim_server.x86_64 -name "${server_name}" -port 2456 -world "${world_name}" -password ${server_password} -batchmode -nographics -public 1
+./valheim_server.x86_64 -name "${server_name}" -port 2456 -world "${world_name}" -password ${server_password} -batchmode -nographics -public 1 -crossplay
 
 export LD_LIBRARY_PATH=$templdpath
