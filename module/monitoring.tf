@@ -5,11 +5,11 @@ resource "aws_sns_topic" "valheim" {
   tags = local.tags
 }
 
-resource "aws_sns_topic_subscription" "valheim" {
-  topic_arn = aws_sns_topic.valheim.arn
-  protocol  = "email"
-  endpoint  = var.sns_email
-}
+# resource "aws_sns_topic_subscription" "valheim" {
+#   topic_arn = aws_sns_topic.valheim.arn
+#   protocol  = "email"
+#   endpoint  = var.sns_email
+# }
 
 data "aws_caller_identity" "current" {}
 
