@@ -1,5 +1,5 @@
 module "main" {
-  source = "../module"
+  source = "../../module"
   admins                  = var.admins
   aws_region              = var.aws_region
   aws_account_id          = var.aws_account_id

@@ -55,12 +55,12 @@ resource "aws_iam_policy_attachment" "ec2_describe" {
 
 resource "aws_lambda_function" "valheim_server_control" {
   # TODO implement a better method of packaging the lambda layer
-  filename         = "../lambda/layer.zip"
+  filename         = "../../lambda/layer.zip"
   function_name    = "valheim_server_control"
   role             = aws_iam_role.lambda_execution_role.arn
   handler          = "app.handler"
   runtime          = "python3.12"
-  source_code_hash = filebase64sha256("../lambda/layer.zip")
+  source_code_hash = filebase64sha256("../../lambda/layer.zip")
   # layers = [
   #   aws_lambda_layer_version.valheim_server_control_layer.arn
   # ]
