@@ -33,8 +33,8 @@ resource "aws_s3_bucket_lifecycle_configuration" "valheim" {
     id     = "rule-1"
     status = "Enabled"
 
-    expiration {
-      days = var.s3_lifecycle_expiration
+    noncurrent_version_expiration {
+      noncurrent_days = var.s3_lifecycle_expiration
     }
   }
 }
