@@ -4,7 +4,7 @@ import awsgi
 import boto3
 from flask import Flask, jsonify, request
 from discord_interactions import verify_key_decorator
-from werkzerg.exceptions import InternalServerError
+from werkzeug.exceptions import InternalServerError
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
