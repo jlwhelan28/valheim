@@ -58,13 +58,13 @@ resource "aws_instance" "valheim" {
   })
   iam_instance_profile           = aws_iam_instance_profile.valheim.name
   vpc_security_group_ids         = [aws_security_group.ingress.id]
-  instance_market_options {
-    market_type = "spot"
-    spot_options {
-      instance_interruption_behavior = "stop"
-      spot_instance_type = "persistent"
-    }
-  }
+  # instance_market_options {
+  #   market_type = "spot"
+  #   spot_options {
+  #     instance_interruption_behavior = "stop"
+  #     spot_instance_type = "persistent"
+  #   }
+  # }
   metadata_options {
     http_endpoint = "enabled"
     http_tokens   = "required"
